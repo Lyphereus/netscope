@@ -12,13 +12,13 @@ for /f "tokens=10 delims= " %%i in ('type %temp%\results.txt ^| find "Lost"') do
 for /f "tokens=2 delims= " %%i in ('netstat /e ^| find "Bytes"') do set r_bytes=%%i
 for /f "tokens=2 delims= " %%i in ('netstat /e ^| find "Bytes"') do set s_bytes=%%i
 cls
-echo ===== MY NETWORK =====
+echo //== Network Information ==\\
 echo SSID:%SSID%
 echo Status:%State% 
 echo Output:%Transmit% 
 echo Input:%Receive%
 echo.
-echo ===== MY SPEED =====
+echo //== Network Speed ==\\
 echo Received Bytes:%r_bytes%
 echo Sent Bytes: %s_bytes%
 echo Latency: %ping%
